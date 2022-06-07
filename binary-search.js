@@ -1,10 +1,16 @@
-const arr = [1,4,5,7,9,24];
+const arr = [ ];
 let start = 0;
+
+for (let index = 0; index < 1000; index++) {
+    arr.push(index);  
+};
+
 let end = arr.length - 1;
 let targetTrue = 4;
-let targetFalse = 25;
+let targetFalse = 1200;
 
 const binarySearch = ( arr, start, end, target ) => {
+    console.log( arr.slice( start, end ) );
     let midIndex = Math.floor( ( start + end ) / 2 );
     if ( arr[midIndex] === target )return true;
     else if (  end - start === 0 ) return false;
